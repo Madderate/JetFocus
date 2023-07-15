@@ -1,6 +1,7 @@
 package com.example.jetfocus.task
 
 import android.content.res.Configuration
+import android.provider.Contacts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
@@ -26,12 +28,13 @@ import com.example.jetfocus.ui.theme.TaskTheme
 
 /* LazyColumn */
 class Task7 {
-    // TODO("把用显示列表用的Column改为LazyColumn，观察他的滚动行为")
     @Composable
     fun UI() {
-        Column {
-            repeat(100) {
-                UserInfoCard()
+        LazyColumn {
+            repeat(1000) {
+                item(it) {
+                    UserInfoCard()
+                }
             }
         }
     }
