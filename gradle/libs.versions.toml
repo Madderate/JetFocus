@@ -1,8 +1,10 @@
 [versions]
-androidxComposeBom = "2023.04.01"
+agp = "8.0.2"
+kotlin = "1.8.21"
+androidxComposeBom = "2023.06.01"
 androidxComposeMaterial = "1.4.3"
-androidxActivityCompose = "1.7.0"
-kotlinxCoroutinesAndroid = "1.6.4"
+androidxActivityCompose = "1.7.2"
+kotlinxCoroutinesAndroid = "1.7.2"
 
 [libraries]
 androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidxComposeBom" }
@@ -16,3 +18,6 @@ androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 
 [plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
